@@ -1,5 +1,6 @@
 using CqrsSample.Api;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<ProdcutDbContext>(
     {
         options.UseSqlServer(connectionString);
     });
+
+builder.Services.Register();
 
 var app = builder.Build();
 

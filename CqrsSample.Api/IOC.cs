@@ -11,7 +11,7 @@ public static class IOC
         services.AddScoped<IReadProductRepository, ReadProductRepository>()
             .AddScoped<IWriteProductRepository, WriteProductRepository>()
             .AddScoped<IReadUnitOfWork, ReadUnitOfWork>()
-            .AddScoped<IWriteUnitOfWork, WriteUnitOfWork>();
+            .AddScoped<IWriteUnitOfWork, WriteUnitOfWork>(); 
         return services;
     }
 }
